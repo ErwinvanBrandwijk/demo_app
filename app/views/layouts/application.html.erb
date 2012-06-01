@@ -12,6 +12,9 @@
   <%= render 'layouts/navigation' %>
   
   <div id="content" class="shadow">
+    <% flash.each do |key, value| %>
+      <div class="flash shadow <%= key %>"><%= value %></div>
+    <% end %>
     <%= yield %>
   </div>
   

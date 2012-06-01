@@ -45,7 +45,24 @@ body {
   -moz-box-shadow: 0px 0px 10px #000000;
   -webkit-box-shadow: 0px 0px 10px #000000;
   box-shadow: 0px 0px 10px #000000;
-  opacity: 0.7;
-  -ms-filter: progid: DXImageTransform.Microsoft.Alpha(Opacity = 70);
-  filter: alpha(opacity = 70);
+  opacity: 0.9;
+  -ms-filter: progid: DXImageTransform.Microsoft.Alpha(Opacity = 90);
+  filter: alpha(opacity = 90);
+}
+
+.flash {
+  padding: 10px;
+}
+.error {
+  border: 2px solid red;
+  color: red;
+}
+.succes {
+  border: 2px solid green;
+  color: green;
+}
+
+input { 
+  border-radius: 5px;
+  background: #F2F2F2;
 }
