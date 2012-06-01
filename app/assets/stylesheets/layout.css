@@ -1,0 +1,52 @@
+body {
+  background: url("background.jpg");
+}
+
+#container {
+  width: 1024px;
+  margin: 0 auto;
+}
+ 
+#navigation {
+  width: 160px;
+  padding: 20px;
+  margin: 0 0 20px 0;
+  min-height: 400px;
+  float: left;
+  
+  background: white;
+  border: 1px solid black;
+}
+
+#content {
+  width: 760px;
+  padding: 20px;
+  margin: 0 0 20px 20px;
+  min-height: 400px;
+  float: left;
+  
+  background: white;
+  border: 1px solid black;
+}
+
+#footer {
+  width: 982px;
+  padding: 20px;
+  height: 20px;
+  clear: both;
+  
+  background: white;
+  border: 1px solid black;
+}
+
+.shadow {
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  -moz-box-shadow: 0px 0px 10px #000000;
+  -webkit-box-shadow: 0px 0px 10px #000000;
+  box-shadow: 0px 0px 10px #000000;
+  opacity: 0.7;
+  -ms-filter: progid: DXImageTransform.Microsoft.Alpha(Opacity = 70);
+  filter: alpha(opacity = 70);
+}
