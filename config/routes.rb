@@ -1,10 +1,13 @@
 DemoApp::Application.routes.draw do
+  get "users/new"
+
   get "pages/home"
-  match '/home', :to => 'pages#home'
   get "pages/contact"
-  match '/about', :to => 'pages#about'
   get "pages/about"
+  match '/home', :to => 'pages#home'
+  match '/about', :to => 'pages#about'
   match '/contact', :to => 'pages#contact'
+  match '/signup', :to => 'users#new'
 
   resources :microposts
 
