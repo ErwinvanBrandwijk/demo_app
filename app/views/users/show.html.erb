@@ -1,5 +1,5 @@
 <h1>User details</h1>
-<%= gravatar_image_tag @user.email %>
+<%= gravatar_for @user %>
 <p><label>Name: </label><%= @user.name %></p>
 <p><label>Email: </label><%= @user.email %></p>
 <small>Created: <%= @user.created_at %> | Updated: <%= @user.updated_at %></small>

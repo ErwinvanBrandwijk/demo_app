@@ -8,7 +8,8 @@ gem 'rails', '3.2.4'
 gem 'mysql', '2.8.1'
 gem 'annotate', '~> 2.4.1.beta' 
 gem 'jquery-rails', '2.0.2'
-gem 'gravatar_image_tag'
+gem 'gravatar_image_tag', '1.1.2'
+gem 'will_paginate', '3.0.3'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -24,6 +25,7 @@ end
 
 group :development do
   gem 'rspec-rails', '2.10.1'
+  gem 'faker'
 end
 
 group :test do
