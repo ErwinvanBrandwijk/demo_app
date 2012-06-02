@@ -57,7 +57,7 @@ body {
   border: 2px solid red;
   color: red;
 }
-.succes {
+.success {
   border: 2px solid green;
   color: green;
 }
@@ -65,4 +65,53 @@ body {
 input { 
   border-radius: 5px;
   background: #F2F2F2;
+}
+
+table {
+  margin: 10px 0;
+  border: 1px solid #F2F2F2;
+}
+
+tr.even_row {
+  background: #F3F3F3;
+}
+
+small.timestamp {
+  display:block;
+  text-align: right;
+}
+
+/* Sign up button */
+a.signup_button {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+  width: 190px;
+  color: #fff;
+  background: #006400;
+  font-size: 150%;
+  font-weight: bold;
+  padding: 20px;
+}
+
+/* User show page */
+table.profile {
+  width: 100%;
+  margin-bottom: 0;
+}
+td.main {
+  width: 70%;
+  padding: 5px;
+}
+
+td.sidebar {
+  width: 30%;
+  padding: 5px;
+  vertical-align: top;
+  background: #EEE;
+}
+.profile img.gravatar {
+  border: 1px solid #999;
+  margin-bottom: -15px;
 }
