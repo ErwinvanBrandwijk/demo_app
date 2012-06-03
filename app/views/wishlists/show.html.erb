@@ -1,0 +1,27 @@
+<p>
+  <b>Name:</b>
+  <%= @wishlist.name %>
+<br />
+  <b>User:</b>
+  <%= @wishlist.user.name%>
+<br />
+<%= link_to 'Edit', edit_wishlist_path(@wishlist) %> |
+<%= link_to 'Back', wishlists_path %>
+</p>
+
+<div id="wishlists">
+  <h2>Wishlist | <%= @wishlist.name %></h2>
+  <% unless @wishlist.wishlistlines.empty? %>
+  <table class="wishlistlines" summary="User wishlistlines">
+    <th>Name</th>
+    <th>Quantity</th>
+    <th>Bought</th>
+    <th>Price</th>
+    <th></th>
+    <%= render @wishlistlines %>
+  </table>
+  <%= will_paginate @wishlistlines %>
+  <% end %>
+</div>
+
+<%= render 'shared/wishlistline_form' %>

@@ -1,0 +1,16 @@
+<tr class="<%= cycle("even_row", "odd_row") %>" >
+  <td class="wishlist">
+    <span class="name"><%= link_to wishlist.name, wishlist %></span>
+  </td>
+
+  <% if current_user?(wishlist.user) %>
+    <td>
+      <%= link_to "delete", wishlist, :method => :delete,
+        :confirm => "You sure?",
+        :title => wishlist.name %>
+      <br />
+      <%= link_to "edit", edit_wishlist_path(wishlist) %>
+    </td>
+  <% end %>
+  
+</tr>

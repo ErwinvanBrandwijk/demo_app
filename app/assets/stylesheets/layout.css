@@ -72,6 +72,14 @@ table {
   border: 1px solid #F2F2F2;
 }
 
+table.microposts, table.wishlists {
+  width: 500px;
+}
+
+td.micropost, td.wishlist {
+  width: 445px;
+}
+
 tr.even_row {
   background: #F3F3F3;
 }

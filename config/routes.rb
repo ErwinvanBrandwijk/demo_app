@@ -1,7 +1,7 @@
 DemoApp::Application.routes.draw do
+
   get "sessions/new"
   get "users/new"
-
   get "pages/home"
   get "pages/contact"
   get "pages/about"
@@ -15,7 +15,8 @@ DemoApp::Application.routes.draw do
   resources :sessions, :only => [:new, :create, :destroy]
   resources :microposts, :only => [:create, :destroy]
   resources :relationships, :only => [:create, :destroy]
-  
+  resources :wishlistlines, :except => [:index, :show] 
+  resources :wishlists
   resources :users do
     member do
       get :following, :followers

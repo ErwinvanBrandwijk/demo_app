@@ -1,0 +1,25 @@
+<h1>Listing wishlists</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Created at</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @wishlists.each do |wishlist| %>
+  <tr>
+    <td><%= wishlist.name %></td>
+    <td><%= wishlist.created_at %></td>
+    <td><%= link_to 'Show', wishlist %></td>
+    <td><%= link_to 'Edit', edit_wishlist_path(wishlist) %></td>
+    <td><%= link_to 'Destroy', wishlist, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= render 'shared/wishlist_form' %>

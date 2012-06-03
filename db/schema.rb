@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120602095613) do
+ActiveRecord::Schema.define(:version => 20120603151020) do
 
   create_table "microposts", :force => true do |t|
     t.string   "content"
@@ -43,5 +43,26 @@ ActiveRecord::Schema.define(:version => 20120602095613) do
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
+
+  create_table "wishlistlines", :force => true do |t|
+    t.string   "name"
+    t.integer  "quantity"
+    t.decimal  "price",       :precision => 10, :scale => 0
+    t.integer  "bought"
+    t.integer  "wishlist_id"
+    t.datetime "created_at",                                 :null => false
+    t.datetime "updated_at",                                 :null => false
+  end
+
+  add_index "wishlistlines", ["wishlist_id"], :name => "index_wishlistlines_on_wishlist_id"
+
+  create_table "wishlists", :force => true do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "wishlists", ["user_id"], :name => "index_wishlists_on_user_id"
 
 end

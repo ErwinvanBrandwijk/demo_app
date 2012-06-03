@@ -1,0 +1,33 @@
+<fieldset>
+<legend>Add an article to your wishlist</legend>
+
+<%= form_for @wishlistline do |f| %>
+  <%= render 'shared/error_messages', :object => f.object %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :quantity %><br />
+    <%= f.number_field :quantity %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :bought %><br />
+    <%= f.number_field :bought %>
+  </div>
+
+  <%= f.hidden_field :wishlist_id %>
+  
+  <div class="actions">
+    <%= f.submit "Submit" %>
+  </div>
+<% end %>
+</fieldset>

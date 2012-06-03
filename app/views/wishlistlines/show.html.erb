@@ -1,0 +1,28 @@
+<p>
+  <b>Name:</b>
+  <%= @wishlistline.name %>
+</p>
+
+<p>
+  <b>Quantity:</b>
+  <%= @wishlistline.quantity %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @wishlistline.price %>
+</p>
+
+<p>
+  <b>Bought:</b>
+  <%= @wishlistline.bought %>
+</p>
+
+<p>
+  <b>Wishlist:</b>
+  <%= @wishlistline.wishlist_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_wishlistline_path(@wishlistline) %> |
+<%= link_to 'Back', wishlist_path(@wishlistline.wishlist) %>

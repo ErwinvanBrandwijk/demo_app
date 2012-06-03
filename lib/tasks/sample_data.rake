@@ -7,6 +7,8 @@ namespace :db do
     make_users
     make_microposts
     make_relationships
+    make_wishlists
+    make_wishlistlines
   end
 end
 
@@ -16,6 +18,11 @@ def make_users
       :password => "foobar",
       :password_confirmation => "foobar")
   admin.toggle!(:admin)
+  normal = User.create!(:name => "Normal User",
+      :email => "erwinvanbrandwijk@gmail.com",
+      :password => "foobar",
+      :password_confirmation => "foobar")
+
   99.times do |n|
     name = Faker::Name.name
     email = "example-#{n+1}@railstutorial.org"
@@ -43,4 +50,23 @@ def make_relationships
   followers = users[3..40]
   following.each { |followed| user.follow!(followed) }
   followers.each { |follower| follower.follow!(user) }
+end
+
+def make_wishlists
+  User.all(:limit => 6).each do |user|
+    5.times do
+      name = Faker::Name.name
+      user.wishlists.create!(:name => name)
+    end
+  end
+end
+
+def make_wishlistlines
+  Wishlist.all(:limit => 15).each do |wishlist|
+    5.times do |n|
+      name = Faker::Name.name
+      price = Random.rand(1...42)
+      wishlist.wishlistlines.create!(:name => name, :quantity => 5, :price => price, :bought => 3)
+    end
+  end
 end

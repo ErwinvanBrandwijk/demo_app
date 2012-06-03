@@ -52,6 +52,7 @@ before_filter :admin_user,   :only => :destroy
   def show
     @user = User.find(params[:id])
     @microposts = @user.microposts.paginate(:page => params[:page], :per_page => 5)
+    @wishlists = @user.wishlists.paginate(:page => params[:page], :per_page => 5)
     @title = @user.name
   end
   

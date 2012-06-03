@@ -17,6 +17,17 @@
         <%= will_paginate @microposts %>
         <% end %>
       </div>
+      
+      
+      <div id="wishlists">
+      <h2>Wishlists</h2>
+        <% unless @user.wishlists.empty? %>
+        <table class="wishlists" summary="User wishlists">
+          <%= render @wishlists %>
+        </table>
+        <%= will_paginate @wishlists %>
+        <% end %>
+      </div>
 
       </td>
       
