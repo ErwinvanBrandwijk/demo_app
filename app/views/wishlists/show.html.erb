@@ -1,19 +1,9 @@
-<p>
-  <b>Name:</b>
-  <%= @wishlist.name %>
-<br />
-  <b>User:</b>
-  <%= @wishlist.user.name%>
-<br />
-<%= link_to 'Edit', edit_wishlist_path(@wishlist) %> |
-<%= link_to 'Back', wishlists_path %>
-</p>
-
 <div id="wishlists">
   <h2>Wishlist | <%= @wishlist.name %></h2>
+  <small>Click on the article values to edit</small>
   <% unless @wishlist.wishlistlines.empty? %>
   <table class="wishlistlines" summary="User wishlistlines">
-    <th>Name</th>
+    <th class="name">Name</th>
     <th>Quantity</th>
     <th>Bought</th>
     <th>Price</th>
@@ -25,3 +15,4 @@
 </div>
 
 <%= render 'shared/wishlistline_form' %>
+<%= link_to 'Back', wishlists_path %>

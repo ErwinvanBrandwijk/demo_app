@@ -1,15 +1,15 @@
 <tr class="<%= cycle("even_row", "odd_row") %>" >
   <td class="name">
-    <%= link_to wishlistline.name, wishlistline %>
+    <%= best_in_place(wishlistline, :name) %>
   </td>
   <td class="quantity">
-    <%= wishlistline.quantity %>
+    <%= best_in_place(wishlistline, :quantity) %>
   </td>  
   <td class="bought">
-    <%= wishlistline.bought %>
+    <%= best_in_place(wishlistline, :bought) %>
   </td> 
     <td class="price">
-    <%= number_to_currency(wishlistline.price, :locale => :fr) %>
+    <%= number_to_currency(best_in_place(wishlistline, :price), :locale => :fr) %>
   </td> 
 
   <% if current_user?(wishlistline.wishlist.user) %>
@@ -17,8 +17,6 @@
       <%= link_to "delete", wishlistline, :method => :delete,
         :confirm => "You sure?",
         :title => wishlistline.name %>
-      <br />
-      <%= link_to "edit", edit_wishlistline_path(wishlistline) %>
     </td>
   <% end %>
   
